@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 7.8.0.final using JasperReports Library version 6.14.0-2ab0d8625be255bf609c78e1181801213e51db8f  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="HighMap" pageWidth="612" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e2f26ed4-0cfd-4e40-a0a0-b11215c0bdf8">
+	<property name="net.sf.jasperreports.data.adapter" value="/samples/data/HsqldbDataAdapter.jrdax"/>
+	<property name="net.sf.jasperreports.export.xls.remove.emtpy.space.between.rows" value="true"/>
+	<import value="java.util.ArrayList.*"/>
+	<import value="java.util.Array.*"/>
+	<subDataset name="USA" uuid="1fbcfaa8-b5bd-4b7a-9e7b-b7bb9ef2946b">
+		<queryString language="SQL">
+		<![CDATA[SELECT "hc_a2" , "name" ,"region" , "x", "y", "value"
+FROM
+(VALUES
+('AL', 'Alabama', 'South', 6, 7, 4849377),
+('AK', 'Alaska', 'West', 0, 0, 737732),
+('AZ', 'Arizona', 'West', 5, 3, 6745408),
+('AR', 'Arkansas', 'South', 5, 6, 2994079),
+('CA', 'California', 'West', 5, 2, 39250017),
+('CO', 'Colorado', 'West', 4, 3, 5540545),
+('CT', 'Connecticut', 'Northeast', 3, 11, 3596677),
+('DE', 'Delaware', 'South', 4, 9, 935614),
+('DC', 'District of Columbia', 'South', 4, 10, 7288000),
+('FL', 'Florida', 'South', 8, 8, 20612439),
+('GA', 'Georgia', 'South', 7, 8, 10310371),
+('HI', 'Hawaii', 'West', 8, 0, 1419561),
+('ID', 'Idaho', 'West', 3, 2, 1634464),
+('IL', 'Illinois', 'Midwest', 3, 6, 12801539),
+('IN', 'Indiana', 'Midwest', 3, 7, 6596855),
+('IA', 'Iowa', 'Midwest', 3, 5, 3107126),
+('KS', 'Kansas', 'Midwest', 5, 5, 2904021),
+('KY', 'Kentucky', 'South', 4, 6, 4413457),
+('LA', 'Louisiana', 'South', 6, 5, 4649676),
+('ME', 'Maine', 'Northeast', 0, 11, 1330089),
+('MD', 'Maryland', 'South', 4, 8, 6016447),
+('MA', 'Massachusetts', 'Northeast', 2, 10, 6811779),
+('MI', 'Michigan', 'Midwest', 2, 7, 9928301),
+('MN', 'Minnesota', 'Midwest', 2, 4, 5519952),
+('MS', 'Mississippi', 'South', 6, 6, 2984926),
+('MO', 'Missouri', 'Midwest', 4, 5, 6093000),
+('MT', 'Montana', 'West', 2, 2, 1023579),
+('NE', 'Nebraska', 'Midwest', 4, 4, 1881503),
+('NV', 'Nevada', 'West', 4, 2, 2839099),
+('NH', 'New Hampshire', 'Northeast', 1, 11, 1326813),
+('NJ', 'New Jersey', 'Northeast', 3, 10, 8944469),
+('NM', 'New Mexico', 'West', 6, 3, 2085572),
+('NY', 'New York', 'Northeast', 2, 9, 19745289),
+('NC', 'North Carolina', 'South', 5, 9, 10146788),
+('ND', 'North Dakota', 'Midwest', 2, 3, 739482),
+('OH', 'Ohio', 'Midwest', 3, 8, 11614373),
+('OK', 'Oklahoma', 'South', 6, 4, 3878051),
+('OR', 'Oregon', 'West', 4, 1, 3970239),
+('PA', 'Pennsylvania', 'Northeast', 3, 9, 12784227),
+('RI', 'Rhode Island', 'Northeast', 2, 11, 1055173),
+('SC', 'South Carolina', 'South', 6, 8, 4832482),
+('SD', 'South Dakota', 'Midwest', 3, 4, 853175),
+('TN', 'Tennessee', 'South', 5, 7, 6651194),
+('TX', 'Texas', 'South', 7, 4, 27862596),
+('UT', 'Utah', 'West', 5, 4, 2942902),
+('VT', 'Vermont', 'Northeast', 1, 10, 626011),
+('VA', 'Virginia', 'South', 5, 8, 8411808),
+('WA', 'Washington', 'West', 2, 1, 7288000),
+('WV', 'West Virginia', 'South', 4, 7, 1850326),
+('WI', 'Wisconsin', 'Midwest', 2, 5, 5778708),
+('WY', 'Wyoming', 'West', 3, 3, 584153)
+) s("hc_a2" , "name" ,"region" , "x", "y", "value")]]>
+		</queryString>
+		<field name="hc_a2" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="hc_a2"/>
+			<fieldDescription><![CDATA[hc_a2]]></fieldDescription>
+		</field>
+		<field name="name" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="name"/>
+			<fieldDescription><![CDATA[name]]></fieldDescription>
+		</field>
+		<field name="region" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="region"/>
+			<fieldDescription><![CDATA[region]]></fieldDescription>
+		</field>
+		<field name="x" class="java.lang.Integer">
+			<property name="net.sf.jasperreports.json.field.expression" value="x"/>
+			<fieldDescription><![CDATA[x]]></fieldDescription>
+		</field>
+		<field name="y" class="java.lang.Integer">
+			<property name="net.sf.jasperreports.json.field.expression" value="y"/>
+			<fieldDescription><![CDATA[y]]></fieldDescription>
+		</field>
+		<field name="value" class="java.lang.Integer">
+			<property name="net.sf.jasperreports.json.field.expression" value="value"/>
+			<fieldDescription><![CDATA[value]]></fieldDescription>
+		</field>
+	</subDataset>
+
+	<queryString language="SQL">
+		<![CDATA[select 1 from orders limit 1]]>
+	</queryString>
+	<detail>
+		<band height="451" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<componentElement>
+				<reportElement x="0" y="0" width="570" height="450" uuid="31e7bbe0-a16b-4eb1-bc31-97b2a0be3f06">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<hc:chart xmlns:hc="http://jaspersoft.com/highcharts" xsi:schemaLocation="http://jaspersoft.com/highcharts http://jaspersoft.com/schema/highcharts.xsd" type="Map">
+					<hc:chartSetting name="default">
+                        <hc:chartProperty name="mapDataName">
+                            <hc:propertyExpression><![CDATA["United States of America"]]></hc:propertyExpression>
+                        </hc:chartProperty>
+                        <hc:chartProperty name="legend.align">
+                            <hc:propertyExpression><![CDATA["center"]]></hc:propertyExpression>
+                        </hc:chartProperty>
+                        <hc:chartProperty name="legend.enabled">
+                            <hc:propertyExpression><![CDATA[true]]></hc:propertyExpression>
+                        </hc:chartProperty>
+                        <hc:chartProperty name="legend.layout">
+                            <hc:propertyExpression><![CDATA["horizontal"]]></hc:propertyExpression>
+                        </hc:chartProperty>
+                        <hc:chartProperty name="legend.margin">
+                            <hc:propertyExpression><![CDATA[0]]></hc:propertyExpression>
+                        </hc:chartProperty>
+                        <hc:chartProperty name="legend.verticalAlign">
+                            <hc:propertyExpression><![CDATA["bottom"]]></hc:propertyExpression>
+                        </hc:chartProperty>
+						<hc:chartProperty name="series.borderWidth">
+							<hc:propertyExpression><![CDATA[1]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="chart.panning">
+							<hc:propertyExpression><![CDATA[true]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="chart.panKey">
+							<hc:propertyExpression><![CDATA["shift"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="series.dataLabels.color" value="#000000"/>
+						<hc:chartProperty name="series.dataLabels.enabled">
+							<hc:propertyExpression><![CDATA[true]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="chart.inverted">
+							<hc:propertyExpression><![CDATA[true]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="series.dataLabels.format">
+							<hc:propertyExpression><![CDATA["<b>{point.hc_a2}</b><br/>"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="title.text">
+							<hc:propertyExpression><![CDATA["U.S. states by population in 2016"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="subtitle.text">
+							<hc:propertyExpression><![CDATA["Source:<a href='https://simple.wikipedia.org/wiki/List_of_U.S._states_by_population'>Wikipedia</a>"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="xAxis.visible">
+							<hc:propertyExpression><![CDATA[false]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="yAxis.visible">
+							<hc:propertyExpression><![CDATA[false]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="tooltip.enabled">
+							<hc:propertyExpression><![CDATA[true]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="tooltip.headerFormat">
+							<hc:propertyExpression><![CDATA[""]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="tooltip.pointFormat">
+							<hc:propertyExpression><![CDATA["The population of <b> {point.name}</b> is <b>{point.value}</b>"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="colorAxis.tickPixelInterval">
+							<hc:propertyExpression><![CDATA[100000]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="colorAxis.min">
+							<hc:propertyExpression><![CDATA[0]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="colorAxis.minColor">
+							<hc:propertyExpression><![CDATA["#E6E7E8"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="colorAxis.maxColor">
+							<hc:propertyExpression><![CDATA["#005645"]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="series.joinBy">
+							<hc:propertyExpression><![CDATA[new String[]{"hc-a2","hc_a2"}]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="plotOptions.series.animation">
+							<hc:propertyExpression><![CDATA[true]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="mapNavigation.enabled">
+							<hc:propertyExpression><![CDATA[true]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="plotOptions.map.states.hover.enabled">
+							<hc:propertyExpression><![CDATA[true]]></hc:propertyExpression>
+						</hc:chartProperty>
+						<hc:chartProperty name="plotOptions.map.states.hover.color">
+							<hc:propertyExpression><![CDATA["#EEDD66"]]></hc:propertyExpression>
+						</hc:chartProperty>
+					</hc:chartSetting>
+					<multiAxisData>
+						<multiAxisDataset>
+							<dataset resetType="Report">
+								<datasetRun subDataset="USA" uuid="3a38b53a-2b6f-43b1-a8b5-d0fa57b8a32b">
+									<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+								</datasetRun>
+							</dataset>
+						</multiAxisDataset>
+						<dataAxis axis="Rows">
+							<axisLevel name="Row1">
+								<labelExpression><![CDATA[""]]></labelExpression>
+								<axisLevelBucket order="None" class="java.lang.Integer">
+									<bucketExpression><![CDATA[$F{y}]]></bucketExpression>
+								</axisLevelBucket>
+							</axisLevel>
+						</dataAxis>
+						<dataAxis axis="Columns">
+							<axisLevel name="Column1">
+								<labelExpression><![CDATA[""]]></labelExpression>
+								<axisLevelBucket order="None" class="java.lang.Integer">
+									<bucketExpression><![CDATA[$F{x}]]></bucketExpression>
+								</axisLevelBucket>
+							</axisLevel>
+						</dataAxis>
+						<multiAxisMeasure name="population" class="java.lang.Integer" calculation="Nothing">
+							<labelExpression><![CDATA[""]]></labelExpression>
+							<valueExpression><![CDATA[$F{value}]]></valueExpression>
+						</multiAxisMeasure>
+						<multiAxisMeasure name="borders" class="java.lang.Integer" calculation="Nothing">
+							<labelExpression><![CDATA[""]]></labelExpression>
+							<valueExpression><![CDATA[1]]></valueExpression>
+						</multiAxisMeasure>
+						<multiAxisMeasure name="hc_a2" class="java.lang.String" calculation="Nothing">
+							<labelExpression><![CDATA[""]]></labelExpression>
+							<valueExpression><![CDATA[$F{hc_a2}]]></valueExpression>
+						</multiAxisMeasure>
+						<multiAxisMeasure name="name" class="java.lang.String" calculation="Nothing">
+							<labelExpression><![CDATA[""]]></labelExpression>
+							<valueExpression><![CDATA[$F{name}]]></valueExpression>
+						</multiAxisMeasure>
+					</multiAxisData>
+					<hc:series name="population">
+						<hc:contributor name="SeriesItemProperty">
+							<hc:contributorProperty name="hc_a2" valueType="Measure" value="hc_a2"/>
+						</hc:contributor>
+						<hc:contributor name="SeriesItemProperty">
+							<hc:contributorProperty name="name" valueType="Measure" value="name"/>
+						</hc:contributor>
+					</hc:series>
+					<hc:series name="borders">
+					  <hc:contributor name="SeriesProperty">
+					    <hc:contributorProperty name="type" valueType="Constant" value="mapline"/>
+					    <hc:contributorProperty name="color" valueType="Constant" value="#FFFFFF"/>
+					  </hc:contributor>
+					</hc:series>
+					<hc:series name="hc_a2" visible="false"/>
+					<hc:series name="name" visible="false"/>
+				</hc:chart>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>
