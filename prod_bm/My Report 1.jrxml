@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft WebStudio version JRWS-3.0.1-release-candidate-SNAPSHOT -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" pageWidth="595" pageHeight="842" name="Blank_A4" uuid="7f3fd7f5-3399-428f-99b8-f4e270f6d366" whenNoDataType="AllSectionsNoDetail" columnCount="1" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30">
+  <property name="com.jaspersoft.studio.zoom" value="1.25"/>
+  <subDataset uuid="19e74194-49e7-4db2-93d4-c4351cb0531e" name="Dataset">
+    <property name="net.sf.jasperreports.data.adapter" value="/prod_bm/ProductsCsvDataAdapter.jrdax"/>
+    <field name="Category" class="java.lang.String">
+      <property name="net.sf.jasperreports.csv.field.column.index" value="0"/>
+    </field>
+    <field name="Type" class="java.lang.String">
+      <property name="net.sf.jasperreports.csv.field.column.index" value="1"/>
+    </field>
+    <field name="Year" class="java.lang.Integer">
+      <property name="net.sf.jasperreports.csv.field.column.index" value="2"/>
+    </field>
+    <field name="Quantity" class="java.lang.Integer">
+      <property name="net.sf.jasperreports.csv.field.column.index" value="3"/>
+    </field>
+    <group name="Group-1"/>
+  </subDataset>
+  <title>
+    <band height="200">
+      <componentElement>
+        <reportElement x="183" y="9" width="221" height="164" uuid="1e8d8eca-dc7c-40f7-9612-373deb0c3f4e"/>
+        <jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+          <datasetRun subDataset="Dataset" uuid="82ecb75b-af41-4f1c-8180-7da6424589ab"/>
+          <jr:columnGroup width="180" uuid="fe2a6fcc-19e2-4b16-bcef-0584fa51d245">
+            <jr:columnHeader height="30">
+              <box>
+                <pen lineWidth="2" lineColor="#18e837"/>
+              </box>
+              <textField>
+                <reportElement x="0" y="0" width="180" height="30" uuid="4236f6b5-5db5-452c-8e75-119a86ddab00"/>
+                <textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+              </textField>
+            </jr:columnHeader>
+            <jr:columnGroup width="180" uuid="952cb59d-7b4e-4c67-b8db-30fb278a71d7">
+              <jr:groupFooter groupName="Group-1">
+                <jr:cell height="30"/>
+              </jr:groupFooter>
+              <jr:column width="60" uuid="0ea9ff38-e5bf-4ae8-a7d4-8dd6f08d2f4f">
+                <jr:tableHeader height="30">
+                  <box>
+                    <pen lineWidth="2" lineColor="#18e837"/>
+                  </box>
+                  <textField>
+                    <reportElement x="0" y="0" width="30" height="30" uuid="c8f17d63-7f78-4d58-917a-46e3a1a2a9b1"/>
+                    <textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+                  </textField>
+                </jr:tableHeader>
+                <jr:tableFooter height="30">
+                  <box>
+                    <pen lineWidth="2" lineColor="#2b20c9"/>
+                  </box>
+                  <staticText>
+                    <reportElement x="0" y="0" width="60" height="30" forecolor="#ec1818" uuid="b0cfadf0-4dd4-4d9b-a4da-a07450c1f24d"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <text><![CDATA[Table Footer]]></text>
+                  </staticText>
+                </jr:tableFooter>
+                <jr:columnFooter height="30">
+                  <box>
+                    <pen lineWidth="2" lineColor="#2b20c9"/>
+                  </box>
+                  <rectangle>
+                    <reportElement x="0" y="0" width="43" height="30" forecolor="#7ed321" uuid="01d565db-034d-4e80-8c86-fd78a50531af"/>
+                    <graphicElement>
+                      <pen lineWidth="3"/>
+                    </graphicElement>
+                  </rectangle>
+                  <staticText>
+                    <reportElement x="0" y="0" width="60" height="30" forecolor="#ec1818" uuid="50a5e12d-f8d1-4695-81d1-7a89d9739025"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <text><![CDATA[Column Footer]]></text>
+                  </staticText>
+                </jr:columnFooter>
+                <jr:detailCell height="30">
+                  <box>
+                    <pen lineWidth="3" lineStyle="Dashed" lineColor="#c51def"/>
+                  </box>
+                  <textField>
+                    <reportElement x="0" y="0" width="60" height="30" forecolor="#e89e0c" uuid="e0c44f73-ce1d-44cd-b9e7-bae359bf2c34"/>
+                    <box>
+                      <pen lineWidth="3" lineStyle="Dashed" lineColor="#c51def"/>
+                    </box>
+                    <textElement textAlignment="Center" verticalAlignment="Middle">
+                      <font size="15"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$F{Category}]]></textFieldExpression>
+                  </textField>
+                </jr:detailCell>
+              </jr:column>
+              <jr:column width="60" uuid="2d60f307-5b0c-4b56-b681-c3a8145ce708">
+                <jr:tableHeader height="30">
+                  <box>
+                    <pen lineWidth="2" lineColor="#18e837"/>
+                  </box>
+                  <textField>
+                    <reportElement x="0" y="0" width="30" height="30" uuid="00cd9d61-4505-44a9-b81f-71df3f010f0a"/>
+                    <textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+                  </textField>
+                </jr:tableHeader>
+                <jr:tableFooter height="30">
+                  <box>
+                    <pen lineWidth="2" lineColor="#2b20c9"/>
+                  </box>
+                </jr:tableFooter>
+                <jr:columnFooter height="30">
+                  <box>
+                    <pen lineWidth="2" lineColor="#2b20c9"/>
+                  </box>
+                </jr:columnFooter>
+                <jr:detailCell height="30">
+                  <box>
+                    <pen lineWidth="3" lineStyle="Dashed" lineColor="#c51def"/>
+                  </box>
+                  <textField>
+                    <reportElement x="0" y="0" width="60" height="30" forecolor="#e89e0c" uuid="456d1eab-095e-4756-b0f5-edc1114024cb"/>
+                    <box>
+                      <pen lineWidth="3" lineStyle="Dashed" lineColor="#c51def"/>
+                    </box>
+                    <textElement textAlignment="Center" verticalAlignment="Middle">
+                      <font size="15"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$F{Type}]]></textFieldExpression>
+                  </textField>
+                </jr:detailCell>
+              </jr:column>
+              <jr:column width="60" uuid="c60f4437-ea73-4b26-9f9b-8114003f7966">
+                <jr:tableHeader height="30">
+                  <box>
+                    <pen lineWidth="2" lineColor="#18e837"/>
+                  </box>
+                  <textField>
+                    <reportElement x="0" y="0" width="30" height="30" uuid="ceeead75-7ca3-4a00-94eb-97d214938df0"/>
+                    <textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+                  </textField>
+                </jr:tableHeader>
+                <jr:tableFooter height="30">
+                  <box>
+                    <pen lineWidth="2" lineColor="#2b20c9"/>
+                  </box>
+                </jr:tableFooter>
+                <jr:columnFooter height="30">
+                  <box>
+                    <pen lineWidth="2" lineColor="#2b20c9"/>
+                  </box>
+                </jr:columnFooter>
+                <jr:detailCell height="30">
+                  <box>
+                    <pen lineWidth="3" lineStyle="Dashed" lineColor="#c51def"/>
+                  </box>
+                  <textField>
+                    <reportElement x="0" y="0" width="60" height="30" forecolor="#e89e0c" uuid="6a8d813b-fb6e-47c8-8833-bd5d40b53c45"/>
+                    <box>
+                      <pen lineWidth="3" lineStyle="Dashed" lineColor="#c51def"/>
+                    </box>
+                    <textElement textAlignment="Center" verticalAlignment="Middle">
+                      <font size="15"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$F{Year}]]></textFieldExpression>
+                  </textField>
+                </jr:detailCell>
+              </jr:column>
+            </jr:columnGroup>
+          </jr:columnGroup>
+          <jr:column width="60" uuid="fbb95a59-1b66-4e03-93c0-2dfbe4a935e9">
+            <jr:tableHeader height="30">
+              <box>
+                <pen lineWidth="2" lineColor="#18e837"/>
+              </box>
+            </jr:tableHeader>
+            <jr:tableFooter height="30">
+              <box>
+                <pen lineWidth="2" lineColor="#2b20c9"/>
+              </box>
+            </jr:tableFooter>
+            <jr:groupFooter groupName="Group-1">
+              <jr:cell height="30">
+                <box>
+                  <pen lineWidth="3" lineStyle="Dashed" lineColor="#c51def"/>
+                </box>
+              </jr:cell>
+            </jr:groupFooter>
+            <jr:columnHeader height="30"/>
+            <jr:columnFooter height="30">
+              <box>
+                <pen lineWidth="2" lineColor="#2b20c9"/>
+              </box>
+            </jr:columnFooter>
+            <jr:detailCell height="30">
+              <box>
+                <pen lineWidth="3" lineStyle="Dashed" lineColor="#c51def"/>
+              </box>
+              <textField>
+                <reportElement x="0" y="0" width="60" height="30" forecolor="#e89e0c" uuid="edcf54a3-2d85-48b1-82cb-3e90736ac088"/>
+                <box>
+                  <pen lineWidth="3" lineStyle="Dashed" lineColor="#c51def"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                  <font size="15"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{Quantity}]]></textFieldExpression>
+              </textField>
+            </jr:detailCell>
+          </jr:column>
+          <jr:column width="60" uuid="9ebcbb10-debb-45d4-ab94-2be600f6e6df">
+            <jr:tableHeader height="30">
+              <box>
+                <pen lineWidth="2" lineColor="#18e837"/>
+              </box>
+            </jr:tableHeader>
+            <jr:tableFooter height="30">
+              <box>
+                <pen lineWidth="2" lineColor="#2b20c9"/>
+              </box>
+            </jr:tableFooter>
+            <jr:groupFooter groupName="Group-1">
+              <jr:cell height="30">
+                <box>
+                  <pen lineWidth="3" lineStyle="Dashed" lineColor="#c51def"/>
+                </box>
+              </jr:cell>
+            </jr:groupFooter>
+            <jr:columnHeader height="30"/>
+            <jr:columnFooter height="30">
+              <box>
+                <pen lineWidth="2" lineColor="#2b20c9"/>
+              </box>
+            </jr:columnFooter>
+            <jr:detailCell height="30">
+              <box>
+                <pen lineWidth="3" lineStyle="Dashed" lineColor="#c51def"/>
+              </box>
+            </jr:detailCell>
+          </jr:column>
+        </jr:table>
+      </componentElement>
+    </band>
+  </title>
+  <pageHeader>
+    <band height="100"/>
+  </pageHeader>
+  <detail>
+    <band height="442"/>
+  </detail>
+  <pageFooter>
+    <band height="100"/>
+  </pageFooter>
+</jasperReport>
