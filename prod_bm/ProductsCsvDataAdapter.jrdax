@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft WebStudioversion 2.0.0 -->
+<csvDataAdapter class="net.sf.jasperreports.data.csv.CsvDataAdapterImpl">
+  <name>Products CSV Data Adapter</name>
+  <dataFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="repositoryDataLocation">
+    <location>/prod_bm/products.csv</location>
+  </dataFile>
+  <recordDelimiter>&#10;</recordDelimiter>
+  <fieldDelimiter>,</fieldDelimiter>
+  <useFirstRowAsHeader>false</useFirstRowAsHeader>
+  <queryExecuterMode>false</queryExecuterMode>
+  <datePattern>yyyy-MM-dd HH:mm:ss</datePattern>
+  <columnNames>Category</columnNames>
+  <columnNames>Type</columnNames>
+  <columnNames>Year</columnNames>
+  <columnNames>Quantity</columnNames>
+</csvDataAdapter>
