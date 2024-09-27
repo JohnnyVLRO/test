@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft WebStudio version 2.0.0 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" pageWidth="595" pageHeight="842" name="Blank_A4" uuid="9fbf18c4-809c-40d9-a7e9-6e92cd89e15d">
+  <property name="net.sf.jasperreports.data.adapter" value="/prod_bm/ProductsCsvDataAdapter.jrdax"/>
+  <property name="net.sf.jasperreports.print.create.bookmarks" value="true"/>
+  <field name="Category" class="java.lang.String">
+    <property name="net.sf.jasperreports.csv.field.column.index" value="0"/>
+  </field>
+  <field name="Type" class="java.lang.String">
+    <property name="net.sf.jasperreports.csv.field.column.index" value="1"/>
+  </field>
+  <field name="Year" class="java.lang.Integer">
+    <property name="net.sf.jasperreports.csv.field.column.index" value="2"/>
+  </field>
+  <field name="Quantity" class="java.lang.Integer">
+    <property name="net.sf.jasperreports.csv.field.column.index" value="3"/>
+  </field>
+  <group name="Category">
+    <groupExpression><![CDATA[$F{Category}]]></groupExpression>
+    <groupHeader>
+      <band height="109">
+        <textField bookmarkLevel="1">
+          <reportElement x="86" y="70" width="187" height="30" forecolor="#4a90e2" uuid="c8d42bfa-b8ad-4c7a-8c35-d75788252742"/>
+          <textElement>
+            <font size="20"/>
+          </textElement>
+          <textFieldExpression><![CDATA[$F{Category}+" list"]]></textFieldExpression>
+          <anchorNameExpression><![CDATA[$F{Category}]]></anchorNameExpression>
+          <hyperlinkAnchorExpression><![CDATA[$F{Category}]]></hyperlinkAnchorExpression>
+          <hyperlinkTooltipExpression><![CDATA["Food category"]]></hyperlinkTooltipExpression>
+        </textField>
+      </band>
+    </groupHeader>
+  </group>
+  <group name="Type">
+    <groupExpression><![CDATA[$F{Type}]]></groupExpression>
+    <groupHeader>
+      <band height="40">
+        <textField bookmarkLevel="2">
+          <reportElement x="246" y="4" width="130" height="30" forecolor="#d0021b" uuid="e20f9e3c-5dda-4d0d-a17e-49261bb8e38f"/>
+          <textElement>
+            <font size="20"/>
+          </textElement>
+          <textFieldExpression><![CDATA[$F{Type}]]></textFieldExpression>
+          <anchorNameExpression><![CDATA[$F{Type}]]></anchorNameExpression>
+          <hyperlinkAnchorExpression><![CDATA[$F{Type}]]></hyperlinkAnchorExpression>
+        </textField>
+      </band>
+    </groupHeader>
+  </group>
+  <title>
+    <band height="85">
+      <staticText>
+        <reportElement x="150" y="29" width="338" height="37" forecolor="#09c241" uuid="c4e0469f-03c6-420b-980d-85ed7b9893c5"/>
+        <textElement textAlignment="Center">
+          <font size="24" isBold="true" isUnderline="true"/>
+        </textElement>
+        <text><![CDATA[FRUITS AND VEGETABLES]]></text>
+      </staticText>
+    </band>
+  </title>
+  <pageHeader>
+    <band height="45">
+      <staticText>
+        <reportElement x="204" y="12" width="155" height="30" uuid="28babb08-6306-4e75-ac29-e6d3fd583807"/>
+        <textElement textAlignment="Center">
+          <font size="20"/>
+        </textElement>
+        <text><![CDATA[Type]]></text>
+      </staticText>
+      <staticText>
+        <reportElement x="359" y="12" width="63" height="30" uuid="56c718a3-042d-4ea5-86ab-1d42579966bf"/>
+        <textElement textAlignment="Center">
+          <font size="20"/>
+        </textElement>
+        <text><![CDATA[Year]]></text>
+      </staticText>
+      <staticText>
+        <reportElement x="422" y="12" width="106" height="30" uuid="5554709f-9ac7-4036-886b-c2ed3aeb1f2b"/>
+        <textElement textAlignment="Center">
+          <font size="20"/>
+        </textElement>
+        <text><![CDATA[Quantity]]></text>
+      </staticText>
+      <staticText>
+        <reportElement x="89" y="12" width="114" height="30" uuid="afb9db9c-2302-4f5a-b242-a4253e37e100"/>
+        <textElement textAlignment="Center">
+          <font size="20"/>
+        </textElement>
+        <text><![CDATA[Category]]></text>
+      </staticText>
+    </band>
+  </pageHeader>
+  <detail>
+    <band height="34">
+      <textField bookmarkLevel="0">
+        <reportElement x="90" y="4" width="113" height="28" forecolor="#4a90e2" uuid="89bbcfaf-78fa-4b1c-bba4-9c699eee7b2f"/>
+        <box>
+          <pen lineWidth="1" lineStyle="Dotted"/>
+        </box>
+        <textElement textAlignment="Center">
+          <font size="20"/>
+        </textElement>
+        <textFieldExpression><![CDATA[$F{Category}]]></textFieldExpression>
+        <anchorNameExpression><![CDATA[$F{Category}]]></anchorNameExpression>
+        <hyperlinkAnchorExpression><![CDATA[$F{Category}]]></hyperlinkAnchorExpression>
+      </textField>
+      <textField>
+        <reportElement x="204" y="4" width="154" height="28" forecolor="#d0021b" uuid="93db1718-87fa-4374-a8bd-00c2ad1ca7de"/>
+        <box>
+          <pen lineWidth="1"/>
+        </box>
+        <textElement textAlignment="Center">
+          <font size="20"/>
+        </textElement>
+        <textFieldExpression><![CDATA[$F{Type}]]></textFieldExpression>
+      </textField>
+      <textField>
+        <reportElement x="359" y="4" width="66" height="28" forecolor="#417505" uuid="b0f2ffd8-3443-4d71-8b88-578a1e2903e4"/>
+        <box>
+          <pen lineWidth="1"/>
+        </box>
+        <textElement textAlignment="Center">
+          <font size="20"/>
+        </textElement>
+        <textFieldExpression><![CDATA[$F{Year}]]></textFieldExpression>
+      </textField>
+      <textField>
+        <reportElement x="425" y="4" width="107" height="28" forecolor="#9013fe" uuid="4d562b92-cea4-4a06-9cd5-551b3ef1de63"/>
+        <box>
+          <pen lineWidth="1"/>
+        </box>
+        <textElement textAlignment="Center">
+          <font size="20"/>
+        </textElement>
+        <textFieldExpression><![CDATA[$F{Quantity}]]></textFieldExpression>
+      </textField>
+    </band>
+  </detail>
+  <pageFooter>
+    <band height="72"/>
+  </pageFooter>
+</jasperReport>
