@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft WebStudio version JRWS-3.0.1-release-candidate-SNAPSHOT -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" pageWidth="595" pageHeight="842" name="Blank_A4" uuid="fd3d97b9-c4a4-468f-8953-fecf63afb34b" columnCount="1" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30">
+  <property name="net.sf.jasperreports.data.adapter" value="/prod_bm/ProductsCsvDataAdapter.jrdax"/>
+  <property name="com.jaspersoft.studio.zoom" value="0.8"/>
+  <field name="Category" class="java.lang.String">
+    <property name="net.sf.jasperreports.csv.field.column.index" value="0"/>
+  </field>
+  <field name="Type" class="java.lang.String">
+    <property name="net.sf.jasperreports.csv.field.column.index" value="1"/>
+  </field>
+  <field name="Year" class="java.lang.Integer">
+    <property name="net.sf.jasperreports.csv.field.column.index" value="2"/>
+  </field>
+  <field name="Quantity" class="java.lang.Integer">
+    <property name="net.sf.jasperreports.csv.field.column.index" value="3"/>
+  </field>
+  <title>
+    <band height="39"/>
+  </title>
+  <pageHeader>
+    <band height="34"/>
+  </pageHeader>
+  <detail>
+    <band height="34">
+      <textField>
+        <reportElement x="9" y="0" width="142" height="30" uuid="9e1972ae-8fa4-4571-94dc-c82cf0a6da0d"/>
+        <textElement textAlignment="Center" verticalAlignment="Middle">
+          <font size="16"/>
+        </textElement>
+        <textFieldExpression><![CDATA[$F{Category}]]></textFieldExpression>
+      </textField>
+      <textField>
+        <reportElement x="151" y="0" width="142" height="30" uuid="248cb19a-8210-471f-b8f2-6da9ad51da7f"/>
+        <textElement textAlignment="Center" verticalAlignment="Middle">
+          <font size="16"/>
+        </textElement>
+        <textFieldExpression><![CDATA[$F{Type}]]></textFieldExpression>
+      </textField>
+      <textField>
+        <reportElement x="293" y="0" width="83" height="30" uuid="224f3e06-4133-45f4-a917-ee374b3df44e"/>
+        <textElement textAlignment="Center" verticalAlignment="Middle">
+          <font size="16"/>
+        </textElement>
+        <textFieldExpression><![CDATA[$F{Year}]]></textFieldExpression>
+      </textField>
+      <textField>
+        <reportElement x="376" y="0" width="142" height="30" uuid="9cf033d9-707d-46ee-9dcb-02e5d71315bc"/>
+        <textElement textAlignment="Center" verticalAlignment="Middle">
+          <font size="16"/>
+        </textElement>
+        <textFieldExpression><![CDATA[$F{Quantity}]]></textFieldExpression>
+      </textField>
+    </band>
+  </detail>
+  <pageFooter>
+    <band height="27"/>
+  </pageFooter>
+</jasperReport>
